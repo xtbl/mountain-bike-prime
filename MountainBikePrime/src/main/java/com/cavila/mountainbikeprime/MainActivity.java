@@ -12,9 +12,6 @@ public class MainActivity extends Activity implements MyListFragment.OnItemSelec
         setContentView(R.layout.activity_main);
     }
 
-    // if the wizard generated an onCreateOptionsMenu you can delete
-    // it, not needed for this tutorial
-
     @Override
     public void onMBItemSelected(String link) {
         DetailFragment fragment = (DetailFragment) getFragmentManager()

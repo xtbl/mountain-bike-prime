@@ -21,7 +21,7 @@ public class DetailFragment extends Fragment{
     }
 
     public void setText(String item) {
-        TextView view = (TextView) getView().findViewById(R.id.detailsText);
+        TextView view = (TextView) getView().findViewById(R.id.bikeName);
         view.setText(item);
     }
 }

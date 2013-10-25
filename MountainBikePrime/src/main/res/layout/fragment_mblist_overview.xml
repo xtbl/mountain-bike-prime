@@ -3,36 +3,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
+<!--mountain bike list-->
+<!--http://www.bicycling.com/mountainbikecom/bikes-gear/2012-editors-choice-value-full-suspension-->
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Press to update"
+        android:text="GT Sensor 9R Elite"
         />
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 2"
+        android:text="Kona Hei-Hei 29"
         />
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 3"
+        android:text="Santa Cruz Superlight"
         />
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 4"
+        android:text="Scott Spark 29 Team"
         />
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 5"
+        android:text="Marin Rift Zone XC6"
         />
 
 </LinearLayout> 
