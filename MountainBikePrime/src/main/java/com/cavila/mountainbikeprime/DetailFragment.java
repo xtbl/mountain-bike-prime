@@ -19,9 +19,20 @@ public class DetailFragment extends Fragment{
                 container, false);
         return view;
     }
+String[] bikeInfo = {"bike1", "bike2", "bike3"};
+// try to get this data from xml
+// 2. receive that bike code parameter here and pass the bike info according to bike code (like an object property by id)
 
     public void setText(String item) {
         TextView view = (TextView) getView().findViewById(R.id.bikeName);
+        TextView view2 = (TextView) getView().findViewById(R.id.price);
+        view.setText(item);
+        view2.setText(item);
+    }
+
+    public void setPrice(String item) {
+        TextView view = (TextView) getView().findViewById(R.id.price);
         view.setText(item);
     }
+
 }

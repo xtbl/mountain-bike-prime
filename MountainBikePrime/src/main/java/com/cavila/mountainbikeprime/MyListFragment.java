@@ -20,12 +20,20 @@ public class MyListFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_mblist_overview,
                 container, false);
         Button button = (Button) view.findViewById(R.id.button1);
+        Button button2 = (Button) view.findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 updateDetail();
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updatePrice();
+            }
+        });
+
         return view;
     }
 
@@ -44,12 +52,21 @@ public class MyListFragment extends Fragment{
         }
     }
 
+// 1. send a bike code from the clicked button as a parameter
+
     // May also be triggered from the Activity
     public void updateDetail() {
         // create fake data
         String newTime = String.valueOf(System.currentTimeMillis());
         // Send data to Activity
         listener.onMBItemSelected(newTime);
+    }
+    // May also be triggered from the Activity
+    public void updatePrice() {
+        // create fake data
+        //String newTime = String.valueOf(System.currentTimeMillis());
+        // Send data to Activity
+        listener.onMBItemSelected("new price");
     }
 
 }
