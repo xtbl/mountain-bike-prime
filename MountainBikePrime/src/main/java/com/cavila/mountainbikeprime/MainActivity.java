@@ -13,11 +13,12 @@ public class MainActivity extends Activity implements MyListFragment.OnItemSelec
     }
 
     @Override
-    public void onMBItemSelected(String link) {
+    public void onMBItemSelected(Integer link) {
         DetailFragment fragment = (DetailFragment) getFragmentManager()
                 .findFragmentById(R.id.detailFragment);
         if (fragment != null && fragment.isInLayout()) {
-            fragment.setText(link);
+            //fragment.setText("(^ O ^)");
+            fragment.setBikeData(link);
         }
     }
 

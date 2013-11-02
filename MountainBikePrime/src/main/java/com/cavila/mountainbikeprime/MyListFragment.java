@@ -13,6 +13,7 @@ import android.widget.Button;
  */
 public class MyListFragment extends Fragment{
     private OnItemSelectedListener listener;
+    public Integer buttonId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,13 +25,15 @@ public class MyListFragment extends Fragment{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateDetail();
+                buttonId = 1;
+                updateBikeDetails(buttonId);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updatePrice();
+                buttonId = 2;
+                updateBikeDetails(buttonId);
             }
         });
 
@@ -38,7 +41,7 @@ public class MyListFragment extends Fragment{
     }
 
     public interface OnItemSelectedListener {
-        public void onMBItemSelected(String link);
+        public void onMBItemSelected(Integer link);
     }
 
     @Override
@@ -59,14 +62,14 @@ public class MyListFragment extends Fragment{
         // create fake data
         String newTime = String.valueOf(System.currentTimeMillis());
         // Send data to Activity
-        listener.onMBItemSelected(newTime);
+        listener.onMBItemSelected(1);
     }
     // May also be triggered from the Activity
-    public void updatePrice() {
+    public void updateBikeDetails(Integer btnId) {
         // create fake data
         //String newTime = String.valueOf(System.currentTimeMillis());
         // Send data to Activity
-        listener.onMBItemSelected("new price");
+        listener.onMBItemSelected(btnId);
     }
 
 }
